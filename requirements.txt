@@ -1,14 +1,4 @@
-tqdm
-sympy
-numpy
-scipy
-torch_scatter
+torch==1.12.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+torch-scatter --find-links https://data.pyg.org/whl/torch-1.12.1+cu116.html
+open3d==0.16.0 --index-url https://pypi.org/simple/
 omegaconf
-pykdtree
-ninja
-matplotlib
-pytorch_lightning==1.6.4
-
---extra-index-url http://eagle.huangjh.tech:8080/simple
---trusted-host eagle.huangjh.tech
-python-pycg==0.2.0
