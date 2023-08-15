@@ -37,28 +37,11 @@ This repository is divided into two parts:
 # Install ninja-build if it's not there
 pip install ninja
 
-# Install pytorch_spsr. Parallel build with MAX_JOBS=XX
-python setup.py install
-
-# If you want to develop locally:
-# python setup.py develop
-```
-
-🌟 If you want to reproduce results from our paper, you don't have to install `pytorch_spsr` to your Python package registry. Instead, we suggest to use [Anaconda](https://www.anaconda.com/) to manage your environment. Following is the suggested way to install the dependencies:
-
-```bash
-# Create a new conda environment
 conda create -n ngs python=3.10
 conda activate ngs
 
-# Install PyTorch (this may require upgrade your driver, why not)
-conda install pytorch cudatoolkit=11.6 -c pytorch -c conda-forge
-
-# Install other packages
-pip install -r requirements.txt
-
-# Compile pytorch_spsr CUDA extensions inplace
-python setup.py build_ext --inplace
+pip install torch==1.12.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+python setup.py install
 ```
 
 ## Using `torch-spsr`
