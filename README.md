@@ -34,14 +34,16 @@ This repository is divided into two parts:
 
 🌱 If you just want to use `pytorch_spsr`, then simply install it like a standard Python package, because the module is compatible with `setuptools`:
 ```shell
-# Install ninja-build if it's not there
-pip install ninja
-
-conda create -n ngs python=3.10
-conda activate ngs
-
-pip install torch==1.12.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+cd neural-galerkin/
+conda create -n spsr python=3.10
+conda activate spsr
+pip install -r requirements.txt
 python setup.py install
+```
+## An example of using `torch-spsr`
+```shell
+cd examples
+python main.py
 ```
 
 ## Using `torch-spsr`
