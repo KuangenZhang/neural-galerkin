@@ -37,8 +37,7 @@ This repository is divided into two parts:
 cd neural-galerkin/
 conda create -n spsr python=3.10
 conda activate spsr
-pip install -r requirements.txt
-python setup.py install
+sh install.sh
 ```
 ## An example of using `torch-spsr`
 ```shell
